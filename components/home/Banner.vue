@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="banner__image">
-                <NuxtImg src="/banner.svg" />
+                <img src="/banner.svg" />
             </div>
         </div>
     </div>

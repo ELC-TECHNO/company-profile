@@ -16,7 +16,7 @@
                class="partners_slide_wrapper"
             >
                <div class="partners_slide_image">
-                  <NuxtImg :src="items.path" />
+                  <img :src="items.path" />
                </div>
             </MyPrefixSlide>
          </MyPrefixCarousel>
@@ -112,7 +112,7 @@ export default defineNuxtComponent({
       &__image {
 
          image {
-            width: 110px;
+            width: 150px;
             height: 10px;
          }
       }
@@ -132,11 +132,11 @@ export default defineNuxtComponent({
 
 
 :deep(.carousel__slide) {
-    margin: 0px 40px;
+    margin: 0px 120px;
     cursor: pointer;
 
     @media (min-width: 1028px) {
-        margin: 0px -20px;
+        margin: 0px 40px;
     }
 
 }

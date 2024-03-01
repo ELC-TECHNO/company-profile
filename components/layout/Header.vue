@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header__container">
             <div class="header__logo">
-                <NuxtImg src="/logo.svg" />
+                <img src="/logo.svg" />
             </div>
             <div class="header__navigation">
                 <div 
