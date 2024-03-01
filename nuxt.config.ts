@@ -17,9 +17,6 @@ export default defineNuxtConfig({
       kanit: "100..900",
     },
   },
-  image: {
-    dir: 'assets/img'
-  },
   carousel: {
     prefix: 'MyPrefix'
   }
