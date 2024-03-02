@@ -52,7 +52,7 @@ export default defineNuxtComponent({
             {
                 id: 2,
                 name: "Layanan scan dari meja",
-                image: "/services/phone.png"
+                image: "/services/phone.svg"
             },
             {
                 id: 3,

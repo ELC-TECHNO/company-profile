@@ -1,7 +1,7 @@
 <template>
   <div class="loading-container">
     <div class="spinner">
-        Sabar Anjing
+        <img src="/logo.svg" />
     </div>
   </div>
 </template>
@@ -28,7 +28,6 @@
   width: 50px;
   height: 50px;
   animation: spin 10s infinite linear;
-  color: $basic-100;
 }
 
 @keyframes spin {
