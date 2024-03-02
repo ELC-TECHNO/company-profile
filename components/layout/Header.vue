@@ -90,6 +90,7 @@ export default defineNuxtComponent({
     z-index: 999;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     &__container {
         display: flex;
@@ -103,7 +104,7 @@ export default defineNuxtComponent({
             height: 100%;
             width: 100%;
 
-            @media (min-width: 1028px) {
+            @media (min-width: 1024px) {
               width: 150px;
             }
         }
@@ -120,7 +121,7 @@ export default defineNuxtComponent({
 
               display: none;
 
-              @media (min-width: 1028px) {
+              @media (min-width: 1024px) {
 
                 display: block;
 
@@ -136,7 +137,7 @@ export default defineNuxtComponent({
 
             &__mobile-toogle {
 
-                @media (min-width: 1028px){
+                @media (min-width: 1024px){
                     display: none;
                 }
 
@@ -145,7 +146,7 @@ export default defineNuxtComponent({
         
     }
 
-    @media (min-width: 1028px) {
+    @media (min-width: 1024px) {
         padding: 1.5% 7% 1.5% 5%;
         border-radius: 0px 0px 60px 60px;
 

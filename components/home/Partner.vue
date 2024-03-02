@@ -4,11 +4,11 @@
          <MyPrefixCarousel
             :items-to-show="6"
             :height="500"
-            :loop="true"
+            :loop="false"
             :autoplay="3000"
             :animationSpeed="10000"
             :wrap-around="true"
-            :transition="0"
+            :transition="1000"
          >
             <MyPrefixSlide
                v-for="items in images"
@@ -123,7 +123,7 @@ export default defineNuxtComponent({
         border: 1px solid;
    }
 
-   @media (min-width: 1028px) {
+   @media (min-width: 1024px) {
 
     padding-top: 5%;
 
@@ -135,7 +135,7 @@ export default defineNuxtComponent({
     margin: 0px 120px;
     cursor: pointer;
 
-    @media (min-width: 1028px) {
+    @media (min-width: 1024px) {
         margin: 0px 40px;
     }
 
