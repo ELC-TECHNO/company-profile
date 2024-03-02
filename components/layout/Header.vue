@@ -7,10 +7,11 @@
             <div class="header__navigation">
                 <div 
                     class="header__navigation__desktop"
+                    :class="{ active: route.path === items.value }"
                     v-for="items in navigationList"
                     :key="items.id"
                 >
-                     <NuxtLink to="/about">{{ items.name }}</NuxtLink>
+                     <NuxtLink :to="items.value">{{ items.name }}</NuxtLink>
                 </div>
                 <div class="header__navigation__mobile-toogle">
                     <span @click="toogleCollapse"><Icon name="foundation:list" color="white" /></span>
@@ -45,13 +46,13 @@ export default defineNuxtComponent({
     const navigationList = ref([
       {
         id: 0,
-        name: "Produk",
-        value: "/dashboard",
+        name: "Home",
+        value: "/",
       },
       {
         id: 1,
         name: "Solusi Bisnis",
-        value: "/dashboard/merchant",
+        value: "/solusi-bisnis",
       },
       {
         id: 2,
@@ -116,6 +117,10 @@ export default defineNuxtComponent({
             display: flex;
             gap: 50px;
             align-items: center;
+
+            .active {
+              font-weight: bold;
+            }
             
             &__desktop {
 

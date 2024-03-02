@@ -46,6 +46,11 @@
             h2 {
                 text-align: left;
                 font-weight: bold;
+
+                @media (max-width: 1024px) {
+                    font-size: 20px;
+                }
+            
             }
 
         }

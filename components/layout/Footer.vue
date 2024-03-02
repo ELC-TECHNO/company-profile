@@ -29,6 +29,7 @@
                     <span>Restaurant</span>
                     <span>Coffeshop</span>
                     <span>Hotel</span>
+                    <span>Sports</span>
                 </div>
                 <div class="footer__content__about">
                     <h5>About</h5>

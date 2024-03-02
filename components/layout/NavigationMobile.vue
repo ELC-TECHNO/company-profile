@@ -8,15 +8,17 @@
                 <div 
                     v-for="items in navigation"
                     :key="items.id" 
-                    class="navigation-mobile__router__link">
-                     <NuxtLink>{{items.name}}</NuxtLink>
+                    class="navigation-mobile__router__link"
+                    :class="{ active: route.path === items?.value }"
+                >
+                     <NuxtLink @click="$emit('toogleCollapse')" :to="items.value" >{{items.name}}</NuxtLink>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<script lang="ts" scoped>
+<script lang="ts">
 
 export default defineNuxtComponent({
     
@@ -24,8 +26,29 @@ export default defineNuxtComponent({
         navigation: {
             required: false,
             type: Array
-        }
+        },
+        
     },
+    setup( { emit } : any){
+
+            const route = useRoute();
+
+            const router = useRouter();
+
+            const isOpen = ref(false);
+
+
+            const linkRouter = (index: string) => {
+                router.push(index);
+                emit('update:modelValue', isOpen);
+            };
+
+
+            return {
+                route,
+                linkRouter
+            }
+    }
 
 })
 
@@ -60,6 +83,10 @@ export default defineNuxtComponent({
         gap: 50px;
         padding: 120px 0%;
 
+        .active {
+            font-weight: bold;
+        }
+
         @media (min-width: 500px) {
             padding: 200px 0%;
         }
@@ -69,6 +96,7 @@ export default defineNuxtComponent({
 
             a {
                 color: $basic-100;
+                text-decoration: none;
             }
 
         }
