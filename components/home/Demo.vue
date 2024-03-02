@@ -30,7 +30,7 @@
         height: 100%;
         width: 100%;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-template-columns: repeat(2, 1fr);
             padding: 5% 10%;
         }
@@ -42,7 +42,7 @@
         flex-direction: column;
         gap: 5%;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             align-self: center;
 
             &__title {
@@ -79,7 +79,7 @@
         height: 100%;
         width: 100%;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-column: 2;
         }
 

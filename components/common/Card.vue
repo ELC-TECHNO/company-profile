@@ -37,7 +37,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1023px) {
     width: 100%;
     min-height: 120px;
   }

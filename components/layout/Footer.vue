@@ -67,7 +67,7 @@
             margin-top: 30px;
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             padding: 5% 20%;
         }
 
@@ -144,7 +144,7 @@
                 
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
 
              grid-template-columns: repeat(4, 1fr);
              gap: 5%;

@@ -43,7 +43,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -62,7 +62,7 @@
                 font-weight: 800;
                 letter-spacing: 2px;
 
-                @media (min-width: 1024px) {
+                @media (min-width: 1023px) {
                     font-size: 34px;
                 }
 
@@ -85,7 +85,7 @@
             h5 {
                 font-size: 15px;
 
-                @media (min-width: 1024px) {
+                @media (min-width: 1023px) {
                     font-size: 20px;
                 }
 
@@ -114,7 +114,7 @@
         grid-row: 1;
         justify-self: center;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-column: 2;
         }
 
@@ -131,7 +131,7 @@
         border-radius: 0px 0px 60px 60px;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1023px) {
         height: 600px;
         padding: 10% 5% 5% 5%;
         border-radius: 0px 0px 60px 60px;

@@ -93,7 +93,7 @@ export default defineNuxtComponent({
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -111,7 +111,7 @@ export default defineNuxtComponent({
                 font-size: 16px;
                 font-weight: 700;
 
-                @media (min-width: 1024px) {
+                @media (min-width: 1023px) {
                     font-size: 32px;
                 }
 
@@ -125,7 +125,7 @@ export default defineNuxtComponent({
             padding: 0% 50% 0% 0%;
             text-align: left;
 
-            @media (min-width: 1024px ) {
+            @media (min-width: 1023px ) {
                 font-size: 15px;
             }
 
@@ -140,7 +140,7 @@ export default defineNuxtComponent({
                 grid-template-columns: repeat(3, 1fr);
                 gap: 5%;
 
-                @media (min-width: 1024px) {
+                @media (min-width: 1023px) {
                     width: 80%;
                 }
             }
@@ -155,7 +155,7 @@ export default defineNuxtComponent({
                     height: 200px;
                 }
 
-                @media (min-width: 1024px) {
+                @media (min-width: 1023px) {
                     display: none;
                 }
 

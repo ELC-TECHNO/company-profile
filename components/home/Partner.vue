@@ -123,7 +123,7 @@ export default defineNuxtComponent({
         border: 1px solid;
    }
 
-   @media (min-width: 1024px) {
+   @media (min-width: 1023px) {
 
     padding-top: 5%;
 
@@ -135,7 +135,7 @@ export default defineNuxtComponent({
     margin: 0px 120px;
     cursor: pointer;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1023px) {
         margin: 0px 40px;
     }
 

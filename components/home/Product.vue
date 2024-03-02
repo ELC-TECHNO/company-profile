@@ -42,7 +42,7 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 50px;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -94,7 +94,7 @@
         &__content {
             padding: 0% 20%;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1023px) {
                 padding: 0% 35%;
 
                 h5 {
@@ -113,7 +113,7 @@
             display: none;
             padding: 0% 20%;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1023px) {
                 display: block;
             }
 
@@ -128,7 +128,7 @@
 
         }
 
-        @media(min-width: 1024px) {
+        @media(min-width: 1023px) {
             grid-column: 2;
             align-items: center;
             align-content: center;
@@ -142,7 +142,7 @@
         margin-top: 10%;
         padding: 0% 20%;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             display: none;
         }
 

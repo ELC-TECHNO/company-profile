@@ -28,7 +28,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 10%;
             align-items: center;
@@ -47,7 +47,7 @@
                 text-align: left;
                 font-weight: bold;
 
-                @media (max-width: 1024px) {
+                @media (max-width: 1023px) {
                     font-size: 20px;
                 }
             
@@ -82,7 +82,7 @@
     &__illustrator {
         display: none;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1023px) {
             display: block;
         }
 

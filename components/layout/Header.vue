@@ -105,7 +105,7 @@ export default defineNuxtComponent({
             height: 100%;
             width: 100%;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 1023px) {
               width: 150px;
             }
         }
@@ -126,7 +126,7 @@ export default defineNuxtComponent({
 
               display: none;
 
-              @media (min-width: 1024px) {
+              @media (min-width: 1023px) {
 
                 display: block;
 
@@ -142,7 +142,7 @@ export default defineNuxtComponent({
 
             &__mobile-toogle {
 
-                @media (min-width: 1024px){
+                @media (min-width: 1023px){
                     display: none;
                 }
 
@@ -151,7 +151,7 @@ export default defineNuxtComponent({
         
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1023px) {
         padding: 1.5% 7% 1.5% 5%;
         border-radius: 0px 0px 60px 60px;
 
