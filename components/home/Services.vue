@@ -57,7 +57,7 @@ export default defineNuxtComponent({
             {
                 id: 3,
                 name: "Call waiter",
-                image: "/services/waiter.png"
+                image: "/services/waiter.svg"
             },
         ])
 
