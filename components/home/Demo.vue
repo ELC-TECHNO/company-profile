@@ -66,6 +66,8 @@
                 border: none;
                 color: #ffffff;
                 background: #01D3B9;
+                cursor: pointer;
+                letter-spacing: 2px;
             }
 
         }

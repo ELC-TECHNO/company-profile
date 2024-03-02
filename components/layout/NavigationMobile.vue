@@ -58,7 +58,11 @@ export default defineNuxtComponent({
         display: flex;
         flex-direction: column;
         gap: 50px;
-        padding: 70px 0%;
+        padding: 120px 0%;
+
+        @media (min-width: 500px) {
+            padding: 200px 0%;
+        }
         
         &__link {
             text-align: center;
@@ -71,6 +75,9 @@ export default defineNuxtComponent({
 
     }
 
+    @media (min-width: 1023px) {
+        display: none;
+    }
 
 }
 

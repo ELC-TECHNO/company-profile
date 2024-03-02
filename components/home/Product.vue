@@ -3,13 +3,13 @@
         <div class="product__wrapper">
             <div class="product__card">
                 <div class="product__card__wrapper">
-                    <CommonCard>asda</CommonCard>
+                    <CommonCard>Example Card</CommonCard>
                 </div>
                 <div class="product__card__wrapper">
-                    <CommonCard>asda</CommonCard>
+                    <CommonCard>Example Card</CommonCard>
                 </div>
                 <div class="product__card__wrapper">
-                    <CommonCard>asda</CommonCard>
+                    <CommonCard>Example Card</CommonCard>
                 </div>
             </div>
             <div class="product__description">

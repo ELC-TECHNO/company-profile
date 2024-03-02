@@ -103,6 +103,7 @@
                 font-weight: bold;
                 color: $basic-100;
                 background:  #01D3B9;
+                cursor: pointer;
             }
 
         }
@@ -124,11 +125,16 @@
 
     }
 
+     @media (min-width: 500px) {
+        height: 800px;
+        padding: 15% 5% 5% 5%;
+        border-radius: 0px 0px 60px 60px;
+    }
+
     @media (min-width: 1024px) {
         height: 600px;
         padding: 10% 5% 5% 5%;
         border-radius: 0px 0px 60px 60px;
-
     }
 
 }

@@ -6,7 +6,7 @@
        <HomePromo />
        <HomeProduct />
        <HomeDemo />
-       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+       <HomeFaq />
     </div>
 
 </template>

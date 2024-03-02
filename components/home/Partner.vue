@@ -2,11 +2,11 @@
    <div class="partners">
       <div class="partners__slide">
          <MyPrefixCarousel
-            :items-to-show="6"
+            :items-to-show="5"
             :height="500"
             :loop="false"
-            :autoplay="3000"
-            :animationSpeed="10000"
+            :autoplay="100"
+            :animationSpeed="100"
             :wrap-around="true"
             :transition="1000"
          >

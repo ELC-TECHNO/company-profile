@@ -166,6 +166,7 @@ export default defineNuxtComponent({
 
                 h5 {
                     font-size: 10px;
+                    cursor: pointer;
 
                     span {
                         text-decoration: underline;
@@ -191,7 +192,7 @@ export default defineNuxtComponent({
         text-align: center;
         align-self: center;
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1023px) {
                 display: none;
             }
 
