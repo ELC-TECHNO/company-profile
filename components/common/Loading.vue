@@ -1,7 +1,7 @@
 <template>
   <div class="loading-container">
     <div class="spinner">
-        <img src="/logo.svg" />
+      <img src="/logo.svg" class="spinner-image" />
     </div>
   </div>
 </template>
@@ -20,18 +20,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $primary; /* Background with transparency */
-  z-index: 9999; /* Make sure loading spinner is on top */
+  background-color: $primary; 
+  z-index: 9999; 
 }
 
 .spinner {
-  width: 50px;
-  height: 50px;
-  animation: spin 10s infinite linear;
+  width: 100px;
+  height: 100px;
+  position: relative; 
+  animation: spin 2s infinite linear;
+}
+
+.spinner-image {
+  width: 120px; 
+  height: 100px; 
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(1800deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
