@@ -7,11 +7,11 @@
             <div class="category__description">
                 <h5>Solusi yang tepat untuk berbagai macam bisnis UMKM anda.</h5>
             </div>
-            <div class="category__content">
+            <div class="category__content" v-if="category">
                 <div class="category__content__card">
-                    <CommonCard  v-for="items in listCategory" :key="items" @click="toogleCategory(items)">{{ items.name }}</CommonCard>
+                    <CommonCard  v-for="(items, index) in category" :key="items" @click="toogleCategory(index)" :class="{ 'active': option === index }">{{ items.name }}</CommonCard>
                 </div>
-                <div class="category__content__description" v-html="selectedCategory?.description" />
+                <div class="category__content__description" v-html="category[option].description" />
                 <div class="category__content__feature">
                     <div class="category__content__feature__title">
                         <h5>Berikut adalah fitur yang terdapat didalam system kami untuk menyelesaikan solusi bisnis anda:</h5>
@@ -29,41 +29,24 @@
 
 export default defineNuxtComponent({
 
-    setup(){
+    props: {
+        category: {
+            required: false,
+            type: Array,
+        },
+    },
+    setup(props: any, {emit}: any){
+        
+        const option = ref(0)
 
-        const listCategory = ref([
-            {
-                id: 1,
-                name: "Coffeshop",
-                description: "Tentukan langkah Anda menuju kemajuan bisnis dengan solusi ELC yang inovatif dan terjangkau! Apakah Anda memiliki bisnis UMKM dan ingin meningkatkan efisiensi operasional serta pengalaman pelanggan? Solusi ELC adalah jawabannya! <br /> <br /> Dengan ELC, Anda dapat: <br />  <br /> 📈   Melacak penjualan secara real-time untuk membuat keputusan yang tepat <br/>  💳   Menerima berbagai jenis pembayaran dengan cepat dan aman <br />  📊   Mengelola inventaris dengan mudah dan menghindari kekurangan atau kelebihan stok <br />  🎯   Meningkatkan loyalitas pelanggan melalui promosi dan program loyalitas terpadu <br /> 💻   Mengakses data bisnis kunci dari mana saja, kapan saja melalui platform online kami <br /> <br /> Tidak perlu lagi khawatir tentang pencatatan manual atau kehilangan kesempatan penjualan. Solusi ELC dirancang khusus untuk memenuhi kebutuhan bisnis UMKM, memberikan Anda alat yang Anda butuhkan untuk tumbuh dan bersaing di pasar yang kompetitif.",
-                fitur: []
-            },
-            {
-                id: 2,
-                name: "Restaurant",
-                description: "Kemajuan bisnis dengan solusi ELC yang inovatif dan terjangkau! Apakah Anda memiliki bisnis UMKM dan ingin meningkatkan efisiensi operasional serta pengalaman pelanggan? Solusi ELC adalah jawabannya! <br /> <br /> Dengan ELC, Anda dapat: <br />  <br /> 📈   Melacak penjualan secara real-time untuk membuat keputusan yang tepat <br/>  💳   Menerima berbagai jenis pembayaran dengan cepat dan aman <br />  📊   Mengelola inventaris dengan mudah dan menghindari kekurangan atau kelebihan stok <br />  🎯   Meningkatkan loyalitas pelanggan melalui promosi dan program loyalitas terpadu <br /> 💻   Mengakses data bisnis kunci dari mana saja, kapan saja melalui platform online kami <br /> <br /> Tidak perlu lagi khawatir tentang pencatatan manual atau kehilangan kesempatan penjualan. Solusi ELC dirancang khusus untuk memenuhi kebutuhan bisnis UMKM, memberikan Anda alat yang Anda butuhkan untuk tumbuh dan bersaing di pasar yang kompetitif.",
-                fitur: []
-            },
-            {
-                id: 3,
-                name: "Hotel",
-                description: " Anda menuju kemajuan bisnis dengan solusi ELC yang inovatif dan terjangkau! Apakah Anda memiliki bisnis UMKM dan ingin meningkatkan efisiensi operasional serta pengalaman pelanggan? Solusi ELC adalah jawabannya! <br /> <br /> Dengan ELC, Anda dapat: <br />  <br /> 📈   Melacak penjualan secara real-time untuk membuat keputusan yang tepat <br/>  💳   Menerima berbagai jenis pembayaran dengan cepat dan aman <br />  📊   Mengelola inventaris dengan mudah dan menghindari kekurangan atau kelebihan stok <br />  🎯   Meningkatkan loyalitas pelanggan melalui promosi dan program loyalitas terpadu <br /> 💻   Mengakses data bisnis kunci dari mana saja, kapan saja melalui platform online kami <br /> <br /> Tidak perlu lagi khawatir tentang pencatatan manual atau kehilangan kesempatan penjualan. Solusi ELC dirancang khusus untuk memenuhi kebutuhan bisnis UMKM, memberikan Anda alat yang Anda butuhkan untuk tumbuh dan bersaing di pasar yang kompetitif.",
-                fitur: []
-            },
-        ])
-
-        const selectedCategory = ref(listCategory.value[0])
-
-        const toogleCategory = (index: any) => {
-            selectedCategory.value = index;
-            console.log(selectedCategory.value)
-        }
-
+        const toogleCategory = (index: number) => {
+            emit('update:modelValue', index);
+            option.value = index;
+        };
 
         return {
-            listCategory,
             toogleCategory,
-            selectedCategory
+            option
         }
 
     }
@@ -109,6 +92,19 @@ export default defineNuxtComponent({
             font-size: 12px;
         }
 
+    }
+
+    .card {
+        background: transparent;
+        border: 1px solid $primary;
+        color: #000000;
+        width: 100%;
+    }
+
+    .active {
+        background: $primary;
+        border: 1px solid $primary;
+        color: #ffffff;
     }
 
 

@@ -2,7 +2,7 @@
     <div class="faq">
         <div class="faq__wrapper">
             <div class="faq__illustrator">
-                <img src="/faq.png" />
+                <img src="/faq.svg" />
             </div>
             <div class="faq__description">
                 <div class="faq__description__title">

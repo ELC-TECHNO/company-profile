@@ -40,7 +40,7 @@
 <script lang="ts">
 
 export default defineNuxtComponent({
-
+    
     setup() {
 
         const listOption = ref([
