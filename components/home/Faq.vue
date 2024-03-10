@@ -12,12 +12,34 @@
                     <h5>Kami dapat membantu anda untuk mengenal kami lebih baik dengan menyiadakan langkah-langkah menggunakan ELC.</h5>
                 </div>
                 <div class="faq__description__button">
-                    <button>F.A.Q</button>
+                    <button @click="goToFaq">F.A.Q</button>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { useRoute, useRouter } from 'vue-router';
+
+export default defineNuxtComponent({
+
+    setup() {
+
+        const route = useRouter();
+
+        const goToFaq = () => {
+            route.push("/faq");
+        };
+
+        return {
+            route,
+            goToFaq
+        };
+    },
+});
+
+</script>
 
 <style lang="scss" scoped>
 

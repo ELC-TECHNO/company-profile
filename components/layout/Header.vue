@@ -57,7 +57,7 @@ export default defineNuxtComponent({
       {
         id: 2,
         name: "F.A.Q",
-        value: "/dashboard/pay-request",
+        value: "/faq",
       },
       {
         id: 3,
