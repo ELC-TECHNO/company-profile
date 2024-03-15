@@ -7,7 +7,7 @@
                     <h2>Promo</h2>
                 </div>
                 <div class="promo__header__more">
-                    <h5>See More</h5>
+                    <h5 @click="goToPromo">See More</h5>
                 </div>
             </div>
             <div class="promo__carousel">
@@ -37,6 +37,28 @@
         <hr />
     </div>
 </template>
+
+<script lang="ts">
+import { useRoute, useRouter } from 'vue-router';
+
+export default defineNuxtComponent({
+
+    setup() {
+
+        const route = useRouter();
+
+        const goToPromo = () => {
+            route.push("/promo");
+        };
+
+        return {
+            route,
+            goToPromo
+        };
+    },
+});
+
+</script>
 
 <style lang="scss" scoped>
 

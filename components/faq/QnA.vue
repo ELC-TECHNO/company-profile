@@ -7,7 +7,7 @@
             <div class="faq__content">
                 <div class="faq__content__card">
                     <div class="faq__content__card__wrapper">
-                        <CommonCard v-for="items in listFaq" :key="items.id"  @click="toogleCategory(items)"> {{ items.name }}</CommonCard>
+                        <CommonCard v-for="items in listFaq" :key="items.id"  @click="toogleCategory(items)" :class="{ 'active': selectedCategory === items}"> {{ items.name }}</CommonCard>
                     </div>
                 </div>
                 <div class="faq__content__qna">
@@ -140,8 +140,8 @@ export default defineNuxtComponent({
 
     &__content {
         display: grid;
-        grid-template-columns: 30% 60%;
-        gap: 10%;
+        grid-template-columns: 30% 65%;
+        gap: 5%;
         
 
         &__qna {
@@ -245,6 +245,19 @@ export default defineNuxtComponent({
             }
             
         }
+    }
+
+    .card {
+        background: transparent;
+        border: 1px solid $primary;
+        color: #000000;
+        width: 100%;
+    }
+
+    .active {
+        background: $primary;
+        border: 1px solid $primary;
+        color: #ffffff;
     }
 }
 </style>
